@@ -1,0 +1,18 @@
+def solve(a, b):
+    A = set(a)
+    B = set(b)
+
+    giao = sorted(A & B)
+    hieu_A_B = sorted(A - B)
+    hieu_B_A = sorted(B - A)
+
+    print(*giao)
+    print(*hieu_A_B)
+    print(*hieu_B_A)
+
+
+n, m = map(int, input().split())
+a = list(map(int, input().split()))[:n]
+b = list(map(int, input().split()))[:m]
+
+solve(a, b)
